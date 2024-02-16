@@ -1,0 +1,70 @@
+@import "variables";
+
+// Custom theme for standard HTML elements
+@mixin apply-theme {
+  // Heading styles
+  h1, h2, h3, h4, h5, h6 {
+      font-family: $font-family;
+      font-weight: bold;
+      color: $primary-color;
+  }
+
+  // List styles
+  ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+  }
+
+  // Button styles
+  button {
+      cursor: pointer;
+      font-family: $font-family;
+      background-color: $primary-color;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+          background-color: darken($primary-color, 10%);
+      }
+  }
+
+  // Form input styles
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+      padding: 8px;
+      border: 1px solid $secondary-color;
+      border-radius: 4px;
+      width: 100%;
+      box-sizing: border-box; // Ensure padding doesn't affect width
+      font-family: $font-family;
+  }
+
+  // Table styles
+  table {
+      width: 100%;
+      border-collapse: collapse;
+  }
+
+  th, td {
+      padding: 8px;
+      text-align: left;
+      border: 1px solid $secondary-color;
+  }
+
+  th {
+      background-color: $primary-color;
+      color: white;
+  }
+
+  .section-title {
+    @include section-heading;
+    text-align: center;
+}
+}
+

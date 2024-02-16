@@ -2,11 +2,18 @@
 $primary-color: #007bff;
 $secondary-color: #6c757d;
 $font-family: Arial, sans-serif;
+$bg-color: #f9f9f9; // Background color for sections
 
 // Import Sass partials for modularity
-@import "variables";
-@import "utilities";
-@import "theme";
+@import "variables"; /* Import variables for customization */
+@import "utilities"; /* Import mixins for utility classes */
+@import "theme";     /* Import mixins for applying custom theme */
+
+// Apply custom theme to standard HTML elements
+@include apply-theme; /* Apply custom theme */
+
+// Apply utility classes
+@include utilities;   /* Apply utility classes */
 
 // Apply styles to standard HTML elements
 h1, h2, h3, h4, h5, h6 {
@@ -39,9 +46,3 @@ th, td {
   border: 1px solid $secondary-color;
   padding: 8px;
 }
-
-// Apply custom theme to standard HTML elements
-@include apply-theme;
-
-// Apply utility classes
-@include utilities;

@@ -82,3 +82,12 @@ th, td {
 }
 
 /*# sourceMappingURL=styles.css.map */
+
+/* Import Sass partials */
+@import "variables"; /* Import variables like $primary-color and $secondary-color */
+@import "utilities"; /* Import mixins for utility classes */
+@import "theme";     /* Import mixins for applying custom theme */
+
+/* Apply custom theme and utility classes */
+@include apply-theme; /* Apply custom theme */
+@include utilities;   /* Apply utility classes */

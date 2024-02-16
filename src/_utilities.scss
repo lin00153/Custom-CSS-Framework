@@ -1,0 +1,76 @@
+@import "variables";
+
+// Utility classes for common styling
+@mixin utilities {
+  .text-primary {
+      color: $primary-color;
+  }
+
+  .text-secondary {
+      color: $secondary-color;
+  }
+
+  .bg-primary {
+      background-color: $primary-color;
+  }
+
+  .bg-secondary {
+      background-color: $secondary-color;
+  }
+
+  .text-center {
+      text-align: center;
+  }
+
+  .btn-small {
+      font-size: 14px;
+      padding: 6px 12px;
+  }
+
+  .btn-large {
+      font-size: 18px;
+      padding: 10px 20px;
+  }
+
+  // Additional utility classes
+  .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+  }
+
+  .section {
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .text-uppercase {
+    text-transform: uppercase;
+}
+
+
+.text-muted {
+    color: #6c757d;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: $primary-color;
+    border: 2px solid $primary-color;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+        background-color: $primary-color;
+        color: white;
+    }
+}
+
+.section-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: $primary-color;
+}
+}

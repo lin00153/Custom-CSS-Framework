@@ -1,0 +1,47 @@
+// Define variables for customization
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$font-family: Arial, sans-serif;
+
+// Import Sass partials for modularity
+@import "variables";
+@import "utilities";
+@import "theme";
+
+// Apply styles to standard HTML elements
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+}
+
+button {
+  cursor: pointer;
+}
+
+input,
+button {
+  font-family: $font-family;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid $secondary-color;
+  padding: 8px;
+}
+
+// Apply custom theme to standard HTML elements
+@include apply-theme;
+
+// Apply utility classes
+@include utilities;
